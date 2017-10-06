@@ -17,4 +17,8 @@ class MergerTest < Minitest::Test
   def test_it_can_merge_two_empty_arrays
     assert_equal [], merger.mergify([], [])
   end
+
+  def test_it_can_merge_two_arrays_with_the_same_value_in_each
+    assert_equal [1, 1], merger.mergify([1], [1])
+  end
 end
