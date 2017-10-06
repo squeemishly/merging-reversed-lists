@@ -3,14 +3,14 @@ require 'pry'
 require 'minitest/autorun'
 require_relative './coding_challenge'
 
-class ObjectTest < Minitest::Test
-  attr_reader :template
+class MergerTest < Minitest::Test
+  attr_reader :merger
 
   def setup
-    @template = TemplateClass.new
+    @merger = Merger.new
   end
 
   def test_it_exists
-    assert_instance_of TemplateClass, template
+    assert_instance_of Merger, merger
   end
 end
